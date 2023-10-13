@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    background-color: whitesmoke;
+    background-image: url("./images/laptop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .navbar
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .main-navbar
+   {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
+  
+  nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    /* margin:20px 0 ; */
+    /* margin-right: 150px;   */
+  }
+  nav ul li
+  {
+    padding: 5px;
+    
+  }
+  nav ul li a{
+    justify-content: space-evenly;
+    padding: 50px 30px;
+    /* height: 50%; */
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+  
+  nav ul li:hover {
+    background: lightgray;
+    border-radius: 10px;
+  }
+  
+   .header{
+    /* margin-right: auto; */
+    /* margin-left: 20%; */
+    font-size: larger;
+    font-weight: 800;
+  }
+
+/* 
+  .sidebar
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter:blur(20px);
+    background-color: rgba(255, 255, 255, 0.495);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 10px;
+  }
+   */
+
+   .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* right: -300px; Adjust the width as needed */
+    width: 180px; /* Adjust the width as needed */
+    /* height: 100%; */
+    background-color: #333; /*Background color for the sidebar*/
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+    
+    /* justify-content: center; */
+    transition: right 0.3s ease; /* Add a smooth transition for animation */
+    z-index: 999; /* Ensure the sidebar appears above other content */
+  }
+
+  .rotate-icon {
+    transform: rotate(90deg); /* Rotate the icon by 90 degrees */
+    transition: transform 2.5s ease; /* Add a smooth transition for the rotation */
+  }
+  
+  .sidebar li 
+  {
+    
+    /* width: 100%; */
+    margin-top: 15px;
+    /* overflow: hidden; */
+  }
+
+  .sidebar a{
+    color:whitesmoke;
+    width: 50%;
+    /* overflow: hidden; */
+    
+  }
+  .humburge
+  {
+    display: none;
+  }
+  
+  @media screen and (max-width:576px) and (min-width:100px)
+  
+  {
+
+    body
+    {
+        /* background-color: aquamarine; */
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+   nav ul .humburge{
+    margin-left: 50px;
+   }
+   .humburge
+   {
+     display: flex;
+   }
+   nav #humburger
+   {
+    margin-right: 0;
+   }
+   nav ul li:hover {
+    background: rgb(244, 59, 59);
+    /* border-radius: 100px; */
+  }
+  .cross{
+    /* width: 25px; */
+    /* border-radius: 20px; */
+    margin-left: 10px;
+  }
+    .main-navbar
+   {
+    display: none;
+   }
+   .sidebar{
+    height: 30%;
+    width: auto;
+    background:gray;
+    
+   }
+   nav .sidebar li:hover{
+    background-color: red;
+    overflow: hidden;
+
+   }
+   body{
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }
+   nav ul li:first-child
+   {
+    float: inline-end;
+   }
+   .humburge:hover,.humburge:active,.humburge:focus
+   {
+    transform: rotate(360deg); /* Rotate the icon by 90 degrees */
+    transition: transform 1s ease; /* Add a smooth transition for the rotation */
+   }
+
+   .cross:hover,.cross:active,.cross:focus{
+    transform: rotate(360deg);
+    transition: transform 1s ease;
+    border-radius:60px;
+    background-color:#f04a4a;
+   }
+   .sidebar li {
+    background-color: black;
+    width: 100%;
+   }
+   .sidebar span{
+    margin-top: 8px;
+    margin-left: 8px;
+   }
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color:black;
+    
+   }
+   .col-1{
+    
+    
+    border: solid red;
+    display: flex;
+    justify-content: center;
+    /* height: 100%; */
+    align-items: center;
+   }
+   .col-2{
+    flex-basis: 1;
+    line-height: 1;
+    border:solid red;
+   }
+}
+ 
+  
